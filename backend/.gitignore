@@ -1,0 +1,17 @@
+# typescript
+dist
+
+# npm
+yarn.lock
+node_modules
+
+# IDEs
+.idea
+.vscode
+
+# local files
+*.log
+
+# secrets
+.env
+

@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model MortgageRate {
+  id Int @id @default(autoincrement())
+  rate_id Int
+  year Int
+  source String
+  down_payment_level Float
+  first_mortgage Boolean
+  long_amortization Boolean
+  rate_type String
+  rate Float
+  posted Boolean
+  refinance_rate Float?
+  type String
+}
